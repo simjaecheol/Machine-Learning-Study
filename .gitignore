@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+.cache
+.pytest_cache
+*.swp
+.#*
+\#*#
+*.bak
+*~
+.python-version
