@@ -195,3 +195,65 @@ This is quite expensive: O(N^2) connections. But we can compute all Y's in paral
 - All inputs are truncated or padded to e.g. 512 tokens.
 
 ## Transfer Learning & BERT
+
+### Transfer Learning
+- Many NLP tasks require common knowledge about language:
+  - sentiment classification
+  - named entity recognition
+  - question answering
+  - machine translation
+  - ...
+- Unlabeled data is abundant, labeled data is limited.
+- Sequential paradigm: pre-training + fine-tuning
+  - pre-training: usally LM(Language Model)
+  - fine-tuning: any "target" task
+
+### Transfer Learning with Transformers
+Pre-training: Language modeling
+
+```
+            monarch
+               ↑
+      Transformer Encoder
+               ↑
+        Embedding Table
+               ↑
+King is the title given to a male ___
+```
+
+Fine-tuning: Sentiment Classification
+- Copy Embedding Table & Transformer Encoder
+- Fine-tune the entire stack
+
+```
+            positive
+               ↑
+           Classifier - Add Classifier
+               ↑
+      Transformer Encoder
+               ↑
+        Embedding Table
+               ↑
+Bittersweet and brilliant to the very end
+```
+
+### BERT
+
+BERT: Bidirectional Encoder Representations from Transformers
+- Bert is a Transformer Encoder trained on Wikipedia
+- Readily available for download on:
+  - English (24 different sizes)
+  - Chinese
+  - Multilingual(104 languages)
+
+**The BERTology**
+BERT's success inspired a lot of follow-up work:
+- RoBERTa(more robust training)
+- More efficent models(fewer parameters, faster inference):
+  - ALBERT
+  - MobileBERT
+  - TinyBERT...
+- Language-specific models:
+  - French: FlauBERT, CamenBERT
+  - Chinese: AMBERT
+  - ...
