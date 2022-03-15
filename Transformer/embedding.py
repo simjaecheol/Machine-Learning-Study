@@ -3,9 +3,9 @@ import tensorflow as tf
 import tensorflow.keras.layers as layers
 
 
-class PositionalEmbedding(layers.Layer):
+class PositionalEncoding(layers.Layer):
     def __init__(self, d_model, max_position_embedding):
-        super(PositionalEmbedding, self).__init__()
+        super(PositionalEncoding, self).__init__()
         self.embedding = tf.zeros([max_position_embedding, d_model])
         position = np.arange(0, max_position_embedding)
         position = np.expand_dims(position, axis=1)
@@ -29,10 +29,10 @@ class TransformerEmbedding(layers.Layer):
     def __init__(self, vocab_size, d_model, max_position_embedding, dropout_prob):
         super(TransformerEmbedding, self).__init__()
         self.token_embedding = TokenEmbedding(vocab_size, d_model)
-        self.pos_embedding = PositionalEmbedding(d_model, max_position_embedding)
+        self.pos_encoding = PositionalEncoding(d_model, max_position_embedding)
         self.dropout = layers.Dropout(rate=dropout_prob)
 
     def forward(self, x):
         token_embedding = self.token_embedding(x)
-        pos_embedding = self.pos_embedding(x)
-        return self.dropout(token_embedding + pos_embedding)
+        pos_encoding = self.pos_encoding(x)
+        return self.dropout(token_embedding + pos_encoding)
