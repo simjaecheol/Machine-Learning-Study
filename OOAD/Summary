@@ -1,0 +1,138 @@
+# OOAD Summary
+
+### A Short Example OOAD
+
+- Define use cases
+- Define domain model
+- Define interaction diagrams
+  - from use cases
+- Define class diagrams
+
+  - from domain model
+
+- Waterfall
+  - 1 iteration
+- UP
+  - 3주
+  - Multiple iterations
+
+### Software Development Process and the UP
+
+- Software development process
+
+  - A systematic approach to building, deploying and possibly maintaining software
+
+- Unified Process(UP): a popular iterative software development process for building object-oriented systems
+  - Inspired from Agile
+  - Iterative
+  - Provides an example structure for how to do OOA/D
+  - Frexible
+  - A de-facto industry standard for developing OO software
+
+### Risk-Driven and Client-Driven Iterative Planning
+
+- The UP encourages a combination of risk-driven and client-driven iterative planning
+
+  - To identify and drive down the high risks, and
+  - To build visible feature that clients care most about.
+
+- Risk-driven iterative development includes more specifically the practice of architecture-centric iterative development.
+  - Early iterations focus on building, testing, and stablizaing the core architecture.
+
+### The UP Phases
+
+- A UP project organizes the work and iterations across 4 major phases.
+  - Inception: approximate vision, business care, scope, vague cost estimates.
+    - check feasibilities
+  - Elaboration: refined vision, iterative implementation of the core architecture, resolution of high risks, identification of most requirements and scope, more realistic estimates
+    - milestone
+    - requirement workshop
+  - Construction: iterative implementation of the remaining lower risk and easier elements and preparation for deployment
+    - release
+    - increment
+  - Transition: beta tests, deployment
+    - production release
+
+### The UP 9 Disciplines
+
+- Business Modeling
+- Requirements
+- Design
+- Implementation
+- Test
+- Deployment
+- Configuration & Change Management
+- Project Management
+- Environment
+
+### The UP Development Case
+
+- Development Case:
+  - An artifact(output) in the Environment discipline
+  - Documenting the choice of practices and UP artifacts for a project
+  - Inception 1 / Elaboration 1 ~ 7 / Construction / Transition
+  - s: 시작 / r: 수정 가능
+  - Architecture Design: Elaboration Phases
+  - Construction에서는 수정 불가능
+
+### The UP Artifact Relationships
+
+- OOA
+  - Domain Model
+  - Use Case Model
+    - Use Case Diagram
+    - Use Case Test
+    - System Sequence Diagram -> system operations
+- OOD
+
+  - Sequence Diagram
+    - Use Case Model
+  - Class Diagram
+    - Domain Model
+    - Skeleton Code
+
+- 추가적인 다이어그램
+  - Statechart Diagram
+  - Activity Diagram
+
+### OOD: Object-Oriented Design
+
+- OOD is sometimes taught as some variation of the following
+
+  - "After identifying your requirements and creating a domain model, then add methods to the appropriate classes, and define the messaging between the object to fulfill the requirements"
+
+- But, it is not enough, because OOD involves deep principles
+
+  - Deciding what methods belong to where and how objects should interact carries consequences should be undertaken seriously.
+
+- Mastering OOD is hard.
+  - involing a large set of soft principles, with many degrees of freedom.
+  - A mind well educated in design principles is important
+  - Patterns can be applied.
+    - GRASP 9 Pattern(Priciples)
+    - 23 Design Patterns
+      - for reuse
+      - 수정시 발생하는 불필요한 수정 최소화
+
+### Designing Objects: Static vs. Dynamic
+
+- Staic models
+
+  - help design the definition of packages, class names, attributes, and method signatures(but not method bodies).
+    - UML class diagram
+
+- Dynamic model
+
+  - help design the logic, the code, or the mothod bodies.
+    - UML interaction diagram(sequence diagram, communication diagram)
+
+- Relationship between static and dynamic modeling:
+  - Spend a short period of time on interaction diagrams, then switch to a wall of related class diagrams.
+
+- Information의 양으로 봤을 때 Class Diagram보다 Sequence Diagram이 더 많은 정보를 가지고 있다.
+
+### OOI: Mapping Designs to Code
+
+- Skeleton Code 
+
+- Method Implementation
