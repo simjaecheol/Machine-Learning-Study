@@ -190,12 +190,17 @@
 
 ## Quiz
 
-### 다음 중 Inception 단계에서 수행되는 활동 또는 결과물이 아닌 것은? 3번
+### 다음 중 Inception 단계에서 수행되는 활동 또는 결과물이 아닌 것은? 1번
 
 ```
 1. Client, Architect 등 모든 과제 관련자들이 참가하는 Requirements Workshop을 개최한다.
+- Elaboration Phase 진행
 2. 대부분의 Use-Cases가 Brief 포맷으로 작성된다.
 3. 대부분의 Architecturally Risky Requirements가 찾아진다.
+- Inception Phase
+  - Architecturally Risky Requirements를 찾는 단계
+- Elaboration Phase
+  - Architecturally Risky Requirements를 해결하는 단계
 4. 필요한 경우 Technical proof-of-concept을 위한 Prototype을 만든다.
 ```
 
